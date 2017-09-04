@@ -1,11 +1,19 @@
 package com.crawler.analysis;
 
+import com.alibaba.fastjson.JSON;
 import com.crawler.entity.TbAuthor;
 import com.crawler.entity.json.Author;
 
 public class EntityCompile {
 
-	public static TbAuthor comileAuthor(Author author) {
+	public static TbAuthor comileAuthor(String json) {
+		// 转化对象
+		Author author = JSON.parseObject(json, Author.class);
+		
+		if (author.getStatus().equalsIgnoreCase("success") && author.getCode() == 0) {
+			// 请求正常 
+		}
+
 		TbAuthor tbAuthor = new TbAuthor();
 		// 获取id
 		String channel_id = author.getChannel_id();

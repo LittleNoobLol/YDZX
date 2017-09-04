@@ -25,8 +25,9 @@ public class YdzxApplicationTests {
 		for (int i = 111112; i < 2000000; i++) {
 			try{
 			String json = HttpClientUtil.get(YDZX.getAuthor(i, 0), HeaderConstant.header);
-			Author parseObject = JSON.parseObject(json, Author.class);
-			TbAuthor comileAuthor = EntityCompile.comileAuthor(parseObject);
+			System.out.println(json);
+			
+			TbAuthor comileAuthor = EntityCompile.comileAuthor(json);
 			System.out.println(comileAuthor.toString());
 			}catch (Exception e) {
 				// TODO: handle exception
