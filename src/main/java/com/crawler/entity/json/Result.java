@@ -37,7 +37,7 @@ public class Result {
 	private String content_type;
 	private boolean b_political;
 	private int title_sn;
-
+	
 	public void setDate(String date) {
 		this.date = date;
 	}

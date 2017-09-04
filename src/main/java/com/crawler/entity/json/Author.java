@@ -26,6 +26,11 @@ public class Author {
 
 	public int fresh_count;
 
+	/**
+	 * 空值信息
+	 */
+	public String reason;
+
 	public int disable_op;
 	/***
 	 * 多少人订阅: 5388人订阅
@@ -65,6 +70,14 @@ public class Author {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
 	}
 
 	public int getCode() {

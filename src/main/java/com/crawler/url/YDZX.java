@@ -24,4 +24,6 @@ public class YDZX {
 		sb.append(System.currentTimeMillis());
 		return sb.toString();
 	}
+	
+	
 }
